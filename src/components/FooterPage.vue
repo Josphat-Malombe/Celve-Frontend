@@ -25,10 +25,10 @@ export default {
         <div class="footer-links">
           <h4>Quick Links</h4>
           <ul>
-            <li><router-link to="/register">Get Started</router-link></li>
             <li><a href="#" @click.prevent="scrollTo('home')">Home</a></li>
-            <li><a href="#" @click.prevent="scrollTo('program')">Programs</a></li>
             <li><a href="#" @click.prevent="scrollTo('about')">About</a></li>
+            <li><a href="#" @click.prevent="scrollTo('program')">Programs</a></li>
+            <li><router-link to="/register">Get Started</router-link></li>
             
           </ul>
         </div>

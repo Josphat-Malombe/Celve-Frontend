@@ -31,7 +31,7 @@ export default {
       </div>
     </section>
 
-    <section id="about" class="mission-section">
+    <section id="about" class="mission-section" style="margin-top: -70px;">
       <div class="container">
         <h2 class="section-title">Empower, Educate, Engage.</h2>
         <div class="card-container">
@@ -102,38 +102,73 @@ export default {
     </section>
 
     <section id="program" class="programs-section">
-      <div class="container programs-container">
-        <div class="program-list">
-          <h3>Our Core Programs</h3>
-          <ul>
-            <li><strong>Know Your Leader:</strong> Get wide informational access about your county leaders.</li>
-            <li><strong>Outreach:</strong> Forums in schools, churches, radio, and rural groups.</li>
-            <li><strong>Research:</strong> Analysis of trends, disinformation, and behavioral change.</li>
-            <li><strong>Peace Forums:</strong> Dialogues and conflict prevention activities.</li>
-          </ul>
+    <div class="container">
+        <!-- Header -->
+        <header class="section-header">
+            <h2>Empowering Citizens Through Education</h2>
+            <p>Join our mission to foster informed, engaged, and responsible communities.</p>
+        </header>
+
+        <!-- Programs Grid -->
+        <div class="programs-grid">
+            <div class="program-card">
+                <h3>Know Your Leader</h3>
+                <p>Access detailed profiles and insights about your county leaders to stay informed.</p>
+            </div>
+            <div class="program-card">
+                <h3>Community Outreach</h3>
+                <p>Engage through forums in schools, churches, radio, and rural communities.</p>
+            </div>
+            <div class="program-card">
+                <h3>Research & Analysis</h3>
+                <p>Explore trends, combat misinformation, and drive behavioral change.</p>
+            </div>
+            <div class="program-card">
+                <h3>Peace Forums</h3>
+                <p>Participate in dialogues and activities to promote peace and prevent conflict.</p>
+            </div>
+            <div class="program-card">
+                <h3>Learn & Empower</h3>
+                <p>Gain knowledge to become an empowered and active citizen.</p>
+            </div>
+            <div class="program-card">
+                <h3>Mentorship</h3>
+                <p>Receive guidance to develop as a responsible and inspiring leader.</p>
+            </div>
+            <div class="program-card">
+                <h3>Certification</h3>
+                <p>Earn credentials to showcase your civic knowledge and skills.</p>
+            </div>
         </div>
-        <div class="join-movement">
-          <h3>Join the Movement</h3>
-          <p>Become a part of the solution for an informed democracy.</p>
-          <ul>
-            <li>✓ Become a Civic Educator</li>
-            <li>✓ Enroll in Our Certification Program</li>
-            <li>✓ Volunteer in Your Community</li>
-            <li>✓ Donate to Support Civic Empowerment</li>
-          </ul>
+
+        <!-- Join Movement -->
+        <div class="join-movement" style="margin-top: 150px;">
+            <h3>Join the Movement</h3>
+            <p>Be a catalyst for change in building an informed democracy.</p>
+            <ul>
+                <li>Become a Civic Educator and inspire others.</li>
+                <li>Volunteer to make a difference in your community.</li>
+                <li>Enroll in our certification program to gain expertise.</li>
+                <li>Donate to support civic education and empowerment.</li>
+            </ul>
+           <router-link to="/register" class="cta-button">Get Involved now</router-link>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
   </div>
 </template>
 
 <style scoped>
-/* GENERAL STYLES */
+
+html{
+  height: 100%;
+}
+
 .homepage {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   color: #4A4A4A;
-  background-color: #f8f9fa; /* Light grey background for the whole page */
+  background-color: #b4b7bb; 
 }
 
 .container {
@@ -146,7 +181,7 @@ export default {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 50px;
-  color: #1a237e; /* A deep, trustworthy blue */
+  color: #1a237e; 
   font-weight: 700;
 }
 
@@ -164,7 +199,7 @@ export default {
 
 .hero-background {
   position: absolute;
-  top: 0;
+  top: 70px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -172,6 +207,8 @@ export default {
   background-size: cover;
   background-position: center;
   z-index: 1;
+  padding-top: 20px;
+  
 }
 
 .hero-background::after {
@@ -181,7 +218,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(10, 25, 47, 0.6); /* Dark blue overlay for readability */
+  background-color: rgba(10, 25, 47, 0.6); 
   z-index: 2;
 }
 
@@ -223,8 +260,8 @@ export default {
 
 /* 2. WHY MATTERS SECTION */
 .why-matters-section {
-  padding: 80px 0;
-  background-color: #ffffff;
+  padding: 150px 0;
+  background-color:#b4b7bb;
 }
 .why-matters-content {
   max-width: 800px;
@@ -309,59 +346,159 @@ export default {
   line-height: 1.6;
 }
 
-/* 4. PROGRAMS SECTION */
 .programs-section {
-    padding: 80px 0;
-    background-color: #4D0099; /* Dark blue background */
-    color: #ffffff;
+    padding: 4rem 1rem;
+    background-color: #b4b7bb;
+    position: relative;
+    overflow: hidden;
+    top: 10px;
+  
+   
 }
 
-.programs-container {
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+   
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    animation: fade-in 1s ease-out;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #4b5563;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.programs-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
 }
 
-.program-list h3, .join-movement h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 25px;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
-    display: inline-block;
+.program-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.program-list ul, .join-movement ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.program-list li {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 15px;
-    color: #bdc3c7;
+.program-card h3 {
+    font-size: 1.5rem;
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
 }
 
-.program-list li strong {
+.program-card p {
+    font-size: 1rem;
+    color: #4b5563;
+}
+
+.join-movement {
+  
+    text-align: center;
+    background: #490f84;
     color: #ffffff;
-    font-weight: 600;
+    padding: 7rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+   
+   
+}
+
+.join-movement h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .join-movement p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    color: #bdc3c7;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.join-movement ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
 }
 
 .join-movement li {
     font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 10px;
+    margin: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.join-movement li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #60a5fa;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #60a5fa;
     color: #ffffff;
-    font-weight: 500;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #3b82f6;
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    .section-header p {
+        font-size: 1rem;
+    }
+    .program-card h3 {
+        font-size: 1.3rem;
+    }
+    .program-card p {
+        font-size: 0.9rem;
+    }
+    .join-movement h3 {
+        font-size: 1.5rem;
+    }
+    .join-movement p {
+        font-size: 1rem;
+    }
 }
 
 /* RESPONSIVE DESIGN */

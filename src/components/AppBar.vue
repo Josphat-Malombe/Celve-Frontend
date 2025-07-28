@@ -69,7 +69,8 @@ body,html{
   width: 100%;
 }
 .app-bar {
-  background-color: #133456;
+  background-color: #4D0099;;
+  /*background-color: #133456;*/
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
   position: fixed;
   top:0;
