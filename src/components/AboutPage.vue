@@ -2,7 +2,7 @@
   <div class="about-page">
     <section class="about-header">
       <div class="container">
-        <h1>Who We Are</h1>
+        <h1>What we do?</h1>
         <p class="tagline">Empower Voters. Inspire Leaders. Sustain Democracy.</p>
       </div>
     </section>
