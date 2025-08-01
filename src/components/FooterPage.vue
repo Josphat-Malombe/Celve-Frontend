@@ -16,6 +16,7 @@ export default {
     <footer class="site-footer">
       <div class="footer-container">
         <div class="footer-about">
+        <img src="@/assets/celvelogo.jpeg" alt="Logo" class="logo-img" />
           <h4>Celve</h4>
           <p style="color: orange;">
             Empower Voters. Inspire Leaders. Sustain Democracy.
@@ -36,8 +37,8 @@ export default {
         <div class="footer-contact">
           <h4>Contact Us</h4>
           <ul>
-            <li><a href="mailto:info@celve.com">info@celve.com</a></li>
-            <li><a href="tel:+254712000000">+254 712 000 000</a></li>
+            <li><a href="mailto:info@celve.com">info@celve.org</a></li>
+            <li><a href="tel:+254712254000">+254 712 254 000</a></li>
             </ul>
         </div>
 
@@ -85,6 +86,12 @@ export default {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 15px;
+}
+
+.logo-img {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
 }
 
 .site-footer h4 {

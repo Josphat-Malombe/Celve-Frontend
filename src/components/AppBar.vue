@@ -3,7 +3,7 @@
     <div class="app-bar-container">
       <!-- Logo and Title -->
       <div class="left-section">
-        <img src="@/assets/logo1.png" alt="Logo" class="logo-img" />
+        <img src="@/assets/celvelogo.jpeg" alt="Logo" class="logo-img" />
         <h4 class="site-title">Center For Electoral Leadership And Voter Education</h4>
       </div>
 

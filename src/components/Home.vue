@@ -116,6 +116,22 @@ export default {
                 <p>Access detailed profiles and insights about your county leaders to stay informed.</p>
             </div>
             <div class="program-card">
+             <h3>Voting Education</h3>
+             <p>Learn how, when, and why to vote. Understand your rights, the voting process, and the impact your vote has in shaping your community and the nation.</p>
+            </div>
+
+            <div class="program-card">
+                <h3>Learn & Empower</h3>
+                <p>Gain knowledge to become an empowered and active citizen.</p>
+            </div>
+
+            <div class="program-card">
+              <h3>Electoral Officials Training</h3>
+              <p>Equip officials with the knowledge and skills to run free, fair, and transparent elections. Our training covers electoral laws, ethical conduct, and efficient polling station management.</p>
+            </div>
+ 
+
+            <div class="program-card">
                 <h3>Community Outreach</h3>
                 <p>Engage through forums in schools, churches, radio, and rural communities.</p>
             </div>
@@ -127,10 +143,7 @@ export default {
                 <h3>Peace Forums</h3>
                 <p>Participate in dialogues and activities to promote peace and prevent conflict.</p>
             </div>
-            <div class="program-card">
-                <h3>Learn & Empower</h3>
-                <p>Gain knowledge to become an empowered and active citizen.</p>
-            </div>
+            
             <div class="program-card">
                 <h3>Mentorship</h3>
                 <p>Receive guidance to develop as a responsible and inspiring leader.</p>
@@ -150,6 +163,9 @@ export default {
                 <li>Volunteer to make a difference in your community.</li>
                 <li>Enroll in our certification program to gain expertise.</li>
                 <li>Donate to support civic education and empowerment.</li>
+                <li>Mentor young leaders passionate about democracy and good governance.</li>
+                <li>Organize voter awareness walks, roadshows, or street theatre in your community.</li>
+               <li>Help translate civic materials into local languages or formats for the visually/hearing impaired.</li>
             </ul>
            <router-link to="/register" class="cta-button">Get Involved now</router-link>
         </div>
