@@ -24,7 +24,8 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: PublicLayouts
+    component: PublicLayouts,
+    meta: { title: 'Celve - Home' },
    
   },
   {
@@ -35,13 +36,16 @@ const routes = [
   {
     path: '/register',
     name: 'RegisterPage',
-    component: () => import('../views/RegisterView.vue')
+    component: () => import('../views/RegisterView.vue'),
+    meta: { title: 'Celve - Register' },
    
   },
     {
     path: '/login',
     name: 'LoginPage',
     component: LoginView,
+    meta: { title: 'Celve - Login' },
+
    
   },
 
@@ -62,73 +66,87 @@ const routes = [
         path: '',
         name: 'HomeScreen',
         component: HomeScreen,
+        meta: { title: 'Celve - Dashboard' },
       },
       {
         path: 'elections',
         name: 'ElectionsDate',
-        component: ElectionDates
+        component: ElectionDates,
+        meta: { title: 'Celve - Elections' },
       },
       {
         path: 'leaders-role',
         name:'RolePage',
-        component: RolePage
+        component: RolePage,
+        meta: { title: 'Celve - Roles' },
       },
       {
         path: 'create-articles',
         name: 'Articles',
-        component: CreatePage
+        component: CreatePage,
+        meta: { title: 'Celve - Create Articles' },
       },
       {
         path: 'read-articles',
         name: 'Article-List',
         component: ArticleList,
+        meta: { title: 'Celve - Articles List'},
       },
       {
         path: 'articles/:slug',
         name: 'ArticleDetail',
-        component: ArticleDetail
+        component: ArticleDetail,
+        meta: { title: 'Celve - Article' },
      },
      {
       path: 'courses/:courseId/modules/:moduleId/lessons/:id',
       name: 'Lesson',
-      component: LessonDetail
+      component: LessonDetail,
+      meta: { title: 'Celve - Lessons' },
      },
      {
       path: 'courses',
       name: 'Courses',
-      component: CourseList
+      component: CourseList,
+      meta: { title: 'Celve - Courses' },
 
      },
      {
      path: 'courses/:id/modules',
      name: 'Modules',
-     component: ModuleList
+     component: ModuleList,
+     meta: { title: 'Celve - Modules' },
      },
 
      {
       path: 'courses/:courseId/modules/:moduleId/lessons',
       name: 'LessonList',
-      component: LessonList
+      component: LessonList,
+      meta: { title: 'Celve - Lessons' },
      },
      {
       path: 'lesson/:id/quiz',
       name: 'QuizPage',
-      component: QuizPage
+      component: QuizPage,
+      meta: { title: 'Celve - Quiz' },
      },
      {
       path: 'know-your-leader',
       name: 'CountyList',
-      component: CountyList
+      component: CountyList,
+      meta: { title: 'Celve - Leaders' },
      },
      {
       path: 'profile',
       name: 'ProfilePage',
-      component: ProfilePage
+      component: ProfilePage,
+      meta: { title: 'Celve - Profile' },
      },
      {
       path:'my-achievements',
       name: 'AchievementPage',
-      component: AchievementPage
+      component: AchievementPage,
+      meta: { title: 'Celve - Achievements' },
      }
 
     ]
@@ -149,6 +167,8 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   const token = localStorage.getItem('access_token');
+
+  document.title = to.meta.title || 'Celve';
 
   if (to.meta.requiresAuth && !token) {
     next({ name: 'LoginPage' });
