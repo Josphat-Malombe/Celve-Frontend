@@ -1,24 +1,26 @@
+
+ <!--Simple app-bar with a logo ,title and somelinks with a get started button...the appbar also has hamburger menu icon
+ for screen size responsiveness-->
 <template>
   <header class="app-bar">
     <div class="app-bar-container">
-      <!-- Logo and Title -->
+   
       <div class="left-section">
         <img src="@/assets/celvelogo.jpeg" alt="Logo" class="logo-img" />
         <h4 class="site-title">Center For Electoral Leadership And Voter Education</h4>
       </div>
 
-      <!-- Desktop Navigation -->
+     
       <nav class="nav-links">
         <a href="#" @click.prevent="scrollTo('home')">Home</a>
-        <a href="#" @click.prevent="scrollTo('about')">About</a>
+        <a href="#" @click.prevent="scrollTo('about-us')">About</a>
         <a href="#" @click.prevent="scrollTo('program')">Programs</a>
+        <a href="#" @click.prevent="scrollTo('article-post')">Articles</a>
         <a href="#" @click.prevent="scrollTo('footer')">Contact</a>
-        <router-link to="/register" class="button">Get Started</router-link>
-    
-        
+        <router-link :to="{name: 'LoginPage'}" class="button">Get Started</router-link>  
       </nav>
 
-      <!-- Hamburger for mobile -->
+    
       <button class="menu-btn" @click="toggleMenu">
         <svg viewBox="0 0 24 24">
           <path v-if="!isOpen" d="M4 6h16M4 12h16M4 18h16"/>
@@ -27,14 +29,14 @@
       </button>
     </div>
 
-    <!-- Mobile Navigation -->
+  
     <div class="mobile-nav" v-if="isOpen">
-      <router-link to="/register" class="mobile-btn">Get Started</router-link>
+      <router-link :to="{name: 'LoginPage'}"  class="mobile-btn">Get Started</router-link>
       <a href="#" @click.prevent="scrollTo('home')">Home</a>
-      <a href="#" @click.prevent="scrollTo('about')">About</a>
+      <a href="#" @click.prevent="scrollTo('about-us')">About</a>
       <a href="#" @click.prevent="scrollTo('program')">Programs</a>
-      <a href="#" @click.prevent="scrollTo('footer')">Contact</a>
-      
+      <a href="#" @click.prevent="scrollTo('article-post')">Articles</a>
+      <a href="#" @click.prevent="scrollTo('footer')">Contact</a>   
     </div>
   </header>
 </template>
@@ -60,7 +62,7 @@ export default {
 </script>
 
 <style scoped>
-/* General AppBar */
+
 
 body,html{
   margin: 0;
@@ -69,8 +71,7 @@ body,html{
   width: 100%;
 }
 .app-bar {
-  background-color: #4D0099;;
-  /*background-color: #133456;*/
+  background-color: #4D0099;
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
   position: fixed;
   top:0;
@@ -80,7 +81,7 @@ body,html{
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* Container */
+
 .app-bar-container {
   display: flex;
   justify-content: space-between;
@@ -91,7 +92,7 @@ body,html{
   padding: 0 24px;
 }
 
-/* Left Section */
+
 .left-section {
   display: flex;
   align-items: center;
@@ -111,7 +112,7 @@ body,html{
   margin: 0;
 }
 
-/* Navigation */
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -129,7 +130,6 @@ body,html{
   color: #1e90ff;
 }
 
-/* Button */
 .button {
   background-color: #1e90ff;
   color: white;
@@ -145,7 +145,7 @@ body,html{
   background-color: #006ad1;
 }
 
-/* Hamburger Menu */
+
 .menu-btn {
   display: none;
   background: none;
@@ -163,7 +163,7 @@ body,html{
   stroke-linejoin: round;
 }
 
-/* Mobile Nav */
+
 .mobile-nav {
   display: none;
   flex-direction: column;
@@ -184,7 +184,6 @@ body,html{
   font-weight: bold;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .nav-links {
     display: none;

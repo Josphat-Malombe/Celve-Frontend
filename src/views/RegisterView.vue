@@ -12,6 +12,7 @@ export default {
       error: null,
       success: null,
       loading: false,
+      showPassword: false,
     };
   },
   methods: {
@@ -51,6 +52,11 @@ export default {
 <template>
   <div class="register-container">
     <div class="form-box">
+      <div class="logo_wrapper">
+        <div class="logo-circle">
+        <img src="@/assets/celvelogo.jpeg"/>
+        </div>
+      </div>
       <h3>Create Your Account</h3>
       <p class="subtitle">Join Celve today!</p>
 
@@ -60,14 +66,22 @@ export default {
       <form @submit.prevent="registerUserHandler">
         <input v-model="username" type="text" placeholder="Username" required />
         <input v-model="email" type="email" placeholder="Email" required />
-        <input v-model="password" type="password" placeholder="Password" required />
-        <input v-model="confirmPassword" type="password" placeholder="Confirm Password" required />
+
+
+        <input v-model="password" :type="showPassword ? 'text': 'password'" placeholder="Password" required />
+        <input v-model="confirmPassword" :type="showPassword ? 'text' :'password'" placeholder="Confirm Password" required />
+
+        <label class="checkbox-minimal">
+             <input type="checkbox" v-model="showPassword" />
+             <span class="checkmark"></span>
+             Show Password
+             </label>
+
 
         <button type="submit" :disabled="loading">
           {{ loading ? 'Registering...' : 'Register' }}
         </button>
       </form>
-
       <p class="login-link">
         Already have an account? <router-link to="/login">Login here</router-link>
       </p>
@@ -76,17 +90,17 @@ export default {
 </template>
 
 <style scoped>
-/* Page background */
+
 .register-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  background: linear-gradient(135deg, #6a11cb 0%, #8d0596 100%);
   padding: 20px;
 }
 
-/* Card-like form box */
+
 .form-box {
   background: #fff;
   padding: 30px 40px;
@@ -109,7 +123,7 @@ export default {
   margin-bottom: 20px;
 }
 
-/* Alerts */
+
 .alert {
   padding: 10px;
   border-radius: 6px;
@@ -124,8 +138,29 @@ export default {
   background: #d1e7dd;
   color: #0f5132;
 }
+.logo_wrapper{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.logo-circle {
+  width: 75px;       
+  height: 75px;
+  border-radius: 50%;
+  overflow: hidden;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff; 
+  border: 2px solid #eee; 
+}
+.logo-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
 
-/* Inputs */
+
 form input {
   width: 100%;
   padding: 12px 15px;
@@ -138,18 +173,17 @@ form input {
 
 form input:focus {
   outline: none;
-  border-color: #2575fc;
+  border-color: #6a11cb;
   box-shadow: 0 0 5px rgba(37, 117, 252, 0.3);
 }
 
-/* Button */
 form button {
   width: 100%;
   padding: 12px;
   margin-top: 15px;
   border: none;
   border-radius: 8px;
-  background: #2575fc;
+  background:#6a11cb;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
@@ -157,7 +191,7 @@ form button {
 }
 
 form button:hover {
-  background: #1d63d8;
+  background: #6a11cb;
 }
 
 form button:disabled {
@@ -165,16 +199,61 @@ form button:disabled {
   cursor: not-allowed;
 }
 
-/* Login link */
+
 .login-link {
   margin-top: 15px;
   font-size: 14px;
 }
 
 .login-link a {
-  color: #2575fc;
+  color: #6a11cb;
   text-decoration: none;
   font-weight: bold;
 }
+
+
+.checkbox-minimal {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.checkbox-minimal input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .register-container {
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .register-form {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  input,
+  select,
+  button {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
 </style>
 

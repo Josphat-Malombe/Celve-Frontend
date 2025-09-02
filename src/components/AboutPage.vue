@@ -1,10 +1,10 @@
 <template>
-  <section class="about-header" >
+  <section class="about-header" id="about-us"  >
     <div class="container">
-        <h1>What We Do</h1>
+        <h1 style="color:white;">What We Do</h1>
         <p class="tagline">Empowering Voters. Inspiring Leaders. Sustaining Democracy.</p>
     </div>
-</section>
+  </section>
    <section class="about-content">
     <div class="container content-container">
         <div class="mission-vision">
@@ -19,20 +19,19 @@
         </div>
         <div class="cta-block">
             <p>Join us in building a stronger, more engaged democratic future.</p>
-            <a href="#get-involved" class="cta-button">Get Involved</a>
+            <router-link :to="{name:'LoginPage'}" class="cta-button">Get Involved</router-link> 
         </div>
     </div>
-</section>
+   </section>
 
-<section class="core-values">
+  <section class="core-values">
     <div class="container">
-        <!-- Header -->
+       
         <header class="section-header">
             <h2>Our Core Values</h2>
             <p>Guiding principles for empowering informed and engaged citizens.</p>
         </header>
 
-        <!-- Values Grid -->
         <div class="values-grid">
             <div class="value-card">
                 <div class="value-icon">
@@ -81,7 +80,7 @@
             </div>
         </div>
     </div>
-</section>
+ </section>
 </template>
 
 <script>
@@ -97,9 +96,10 @@ export default {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
+ 
 }
 
-/* Header Section */
+
 .about-header {
     padding: 4rem 1rem;
     background: #490f84;
@@ -204,7 +204,7 @@ export default {
 
 .cta-block p {
     font-size: 1.2rem;
-    color: #4b5563;
+    color: white;
     margin-bottom: 1.5rem;
     animation: fade-in 1.4s ease-out;
 }
@@ -212,7 +212,7 @@ export default {
 .cta-button {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background: #490f84;
+    background:#1e3a8a;
     color: #ffffff;
     text-decoration: none;
     border-radius: 4px;
@@ -255,6 +255,11 @@ export default {
     text-align: center;
     margin-bottom: 7rem;
     margin-top: 120px;
+   
+}
+.core-values{
+    background-color: #b4b7bb; 
+    padding: 10px 0px;
 }
 
 .section-header h2 {

@@ -12,9 +12,9 @@ export default {
     <section id="home" class="hero-section">
       <div class="hero-background"></div>
       <div class="hero-content">
-        <h1>Center for Electoral Leadership and Voter Education</h1>
+        <h1 style="color:white;">Center for Electoral Leadership and Voter Education</h1>
         <p style="color: orange;">Empower Voters. Inspire Leaders. Sustain Democracy.</p>
-        <router-link to="/register" class="cta-button">Get Involved</router-link>
+        <router-link :to="{name: 'LoginPage'}" class="cta-button">Get Involved</router-link>
        
       </div>
     </section>
@@ -31,7 +31,7 @@ export default {
       </div>
     </section>
 
-    <section id="about" class="mission-section" style="margin-top: -70px;">
+    <section id="" class="mission-section" style="margin-top: -70px;">
       <div class="container">
         <h2 class="section-title">Empower, Educate, Engage.</h2>
         <div class="card-container">
@@ -103,13 +103,10 @@ export default {
 
     <section id="program" class="programs-section">
     <div class="container">
-        <!-- Header -->
         <header class="section-header">
             <h2>Empowering Citizens Through Education</h2>
             <p>Join our mission to foster informed, engaged, and responsible communities.</p>
         </header>
-
-        <!-- Programs Grid -->
         <div class="programs-grid">
             <div class="program-card">
                 <h3>Know Your Leader</h3>
@@ -154,7 +151,6 @@ export default {
             </div>
         </div>
 
-        <!-- Join Movement -->
         <div class="join-movement" style="margin-top: 150px;">
             <h3>Join the Movement</h3>
             <p>Be a catalyst for change in building an informed democracy.</p>
@@ -167,7 +163,7 @@ export default {
                 <li>Organize voter awareness walks, roadshows, or street theatre in your community.</li>
                <li>Help translate civic materials into local languages or formats for the visually/hearing impaired.</li>
             </ul>
-           <router-link to="/register" class="cta-button">Get Involved now</router-link>
+           <router-link :to="{name: 'LoginPage'}"  class="cta-button2">Get Involved now</router-link>
         </div>
     </div>
 </section>
@@ -201,7 +197,6 @@ html{
   font-weight: 700;
 }
 
-/* 1. HERO SECTION */
 .hero-section {
   position: relative;
   height: 85vh;
@@ -258,7 +253,7 @@ html{
 }
 
 .cta-button {
-  background-color: #3498db; /* Bright, optimistic blue */
+  background-color: #3498db; 
   color: white;
   padding: 15px 35px;
   border-radius: 50px;
@@ -274,7 +269,6 @@ html{
   transform: translateY(-3px);
 }
 
-/* 2. WHY MATTERS SECTION */
 .why-matters-section {
   padding: 150px 0;
   background-color:#b4b7bb;
@@ -302,7 +296,6 @@ html{
   color: #333;
 }
 
-/* 3. MISSION SECTION & CARDS */
 .mission-section {
   padding: 80px 0;
 }
@@ -336,8 +329,8 @@ html{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #e3f2fd; /* Light blue background for icon */
-  color: #1976d2; /* Darker blue for icon */
+  background-color: #e3f2fd; 
+  color: #1976d2; 
 }
 
 .card-icon svg {
@@ -476,10 +469,10 @@ html{
     color: #60a5fa;
 }
 
-.cta-button {
+.cta-button2 {
     display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background: #60a5fa;
+    padding: 10px;
+    background:#1e3a8a;
     color: #ffffff;
     text-decoration: none;
     border-radius: 4px;
@@ -497,12 +490,14 @@ html{
 }
 
 @media (max-width: 768px) {
+
     .section-header h2 {
         font-size: 2rem;
     }
     .section-header p {
         font-size: 1rem;
     }
+    
     .program-card h3 {
         font-size: 1.3rem;
     }
@@ -515,23 +510,7 @@ html{
     .join-movement p {
         font-size: 1rem;
     }
-}
-
-/* RESPONSIVE DESIGN */
-@media (max-width: 992px) {
-    .hero-content h1 {
-        font-size: 2.8rem;
-    }
-    .hero-content p {
-        font-size: 1.3rem;
-    }
-    .section-title, .why-matters-content h2 {
-        font-size: 2.2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-section {
+      .hero-section {
         height: 70vh;
     }
     .hero-content h1 {
@@ -546,5 +525,15 @@ html{
     .card-container {
         grid-template-columns: 1fr;
     }
+     .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    .hero-content p {
+        font-size: 1.3rem;
+    }
+    .section-title, .why-matters-content h2 {
+        font-size: 2.2rem;
+    }
 }
+
 </style>

@@ -24,8 +24,12 @@ export default {
 
         const accessToken = response.data.access;
         localStorage.setItem('access_token', accessToken);
+        if (response.data.refresh) {
+           localStorage.setItem('refresh_token', response.data.refresh);
+          }
+       
 
-        this.$router.push({ name: 'HomePage' });
+        this.$router.push({ name: 'HomeScreen' });
       } catch (err) {
         this.error = err.response?.data?.detail || 'Invalid credentials';
       } finally {
@@ -39,6 +43,11 @@ export default {
 <template>
   <div class="login-container">
     <div class="form-box">
+      <div class="logo_wrapper">
+        <div class="logo-circle">
+          <img src="@/assets/celvelogo.jpeg" alt="celve logo"/>
+        </div>
+      </div>
       <h3>Welcome Back</h3>
       <p class="subtitle">Login to continue learning</p>
 
@@ -54,7 +63,7 @@ export default {
       </form>
 
       <p class="register-link">
-        Don't have an account? <router-link to="/register">Register here</router-link>
+        Don't have an account? <router-link :to="{name: 'RegisterPage'}" >Register here</router-link>
       </p>
     </div>
   </div>
@@ -71,21 +80,20 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full height */
+  height: 100vh; 
   width: 100vw;
-  background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+  background: linear-gradient(135deg, #670270 0%, #6a11cb 100%);
   padding: 0px;
   margin: 0;
   box-sizing: border-box;
   
 }
 
-/* Card style */
 .form-box {
   background: #fff;
   padding: 30px 40px;
   border-radius: 12px;
-  width: 100%;
+  width: 80%;
   max-width: 400px;
   text-align: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -103,7 +111,6 @@ export default {
   margin-bottom: 20px;
 }
 
-/* Alerts */
 .alert {
   padding: 10px;
   border-radius: 6px;
@@ -115,7 +122,6 @@ export default {
   color: #842029;
 }
 
-/* Inputs */
 form input {
   width: 100%;
   padding: 12px 15px;
@@ -132,7 +138,6 @@ form input:focus {
   box-shadow: 0 0 5px rgba(106, 17, 203, 0.3);
 }
 
-/* Button */
 form button {
   width: 100%;
   padding: 12px;
@@ -155,7 +160,30 @@ form button:disabled {
   cursor: not-allowed;
 }
 
-/* Register link */
+
+.logo_wrapper{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.logo-circle {
+  width: 75px;       
+  height: 75px;
+  border-radius: 50%;
+  overflow: hidden;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff; 
+  border: 2px solid #eee; 
+}
+.logo-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+
 .register-link {
   margin-top: 15px;
   font-size: 14px;

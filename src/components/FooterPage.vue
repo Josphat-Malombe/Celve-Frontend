@@ -1,3 +1,6 @@
+
+
+
 <script>
 export default {
 
@@ -62,17 +65,17 @@ export default {
 </template>
 
 <style>
-/* Basic Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Footer Styling */
+
 .site-footer {
-    background-color: #2c3e50; /* A modern, dark blue-grey */
-    color: #bdc3c7; /* A light, soft grey for text */
+    background-color: #2c3e50;
+    color: #bdc3c7; 
     padding: 45px 0 20px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 15px;
@@ -95,7 +98,7 @@ export default {
 }
 
 .site-footer h4 {
-    color: #ecf0f1; /* A brighter white for headings */
+    color: #ecf0f1; 
     text-transform: uppercase;
     margin-bottom: 25px;
     font-size: 16px;
@@ -104,13 +107,13 @@ export default {
 }
 
 .footer-about, .footer-links, .footer-contact, .footer-social {
-    width: 100%; /* Full width on small screens */
+    width: 100%; 
     margin-bottom: 30px;
 }
 
 @media (min-width: 768px) {
     .footer-about, .footer-links, .footer-contact {
-        width: 22%; /* Adjust width for medium screens */
+        width: 22%;
     }
     .footer-social {
         width: 22%;
@@ -140,7 +143,7 @@ export default {
 }
 
 .site-footer a:hover {
-    color: #3498db; /* A vibrant blue for hover effect */
+    color: #3498db; 
 }
 
 .footer-links ul, .footer-contact ul {
@@ -153,7 +156,7 @@ export default {
     margin-bottom: 10px;
 }
 
-/* Social Icons */
+
 .footer-social a {
     display: inline-flex;
     align-items: center;
@@ -162,7 +165,7 @@ export default {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #34495e; /* A slightly lighter shade than the footer bg */
+    background-color: #34495e; 
     color: #ecf0f1;
     transition: background-color 0.3s ease-in-out;
 }
@@ -177,7 +180,7 @@ export default {
     height: 20px;
 }
 
-/* Footer Bottom */
+
 .footer-bottom {
     border-top: 1px solid #34495e;
     margin-top: 30px;
@@ -203,7 +206,6 @@ export default {
     font-size: 14px;
 }
 
-/* Responsive adjustments for the bottom part */
 @media (max-width: 767px) {
     .footer-bottom {
         flex-direction: column;
