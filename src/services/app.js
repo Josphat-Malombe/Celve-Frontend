@@ -8,7 +8,7 @@ as a temporary solution. */
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://celve-backend.onrender.com',
+  baseURL: 'https://celve-backend.onrender.com/api/',
   //baseURL: 'http://127.0.0.1:8000/api/',
   withCredentials: true,
   headers: {
@@ -18,7 +18,8 @@ const api = axios.create({
 });
 
 const refreshClient = axios.create({
-  baseURL: 'https://celve-backend.onrender.com',
+  //baseURL: 'http://127.0.0.1:8000/api/',
+  baseURL: 'https://celve-backend.onrender.com/api',
   withCredentials: true,
 });
 
