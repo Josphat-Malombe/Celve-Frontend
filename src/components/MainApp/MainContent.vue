@@ -9,6 +9,9 @@
         <div v-if="menuOpen" class="dropdown-menu">
           <router-link :to="{name: 'ProfilePage'}" class="dropdown-item">Profile</router-link>
           <router-link :to="{name: 'HomeScreen'}" class="dropdown-item">Dashboard</router-link>
+          <a v-if="isSuperuser" href="https://celve-backend.onrender.com/admin/" target="_blank" class="dropdown-item">
+            Admin Panel
+            </a>
           <button @click="handleLogout" class="logout-btn">Logout</button>
         </div>
       </div>
@@ -27,6 +30,7 @@ export default {
       username: '',
       initials: '',
       firstName: '',
+      isSuperuser: false, 
       menuOpen: false,  
     };
   },
@@ -55,6 +59,7 @@ export default {
     try {
       const response = await getProfile();
       this.username = response.data.username;
+      this.isSuperuser = response.data.is_superuser;
       this.initials = this.username ? this.username.charAt(0).toUpperCase() : '';
       const nameParts = this.username.split(/[\s-_]+/);
       this.firstName = nameParts.length > 0 ? nameParts[0] : this.username;

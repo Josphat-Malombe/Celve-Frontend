@@ -1,6 +1,7 @@
 <script>
 import { registerUser } from '../services/AuthService';
 
+
 export default {
   name: 'RegisterPage',
   data() {
