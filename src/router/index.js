@@ -19,6 +19,7 @@ import ProfilePage from '@/views/MainApp/ProfilePage.vue'
 import AchievementPage from '@/views/MainApp/AchievementPage.vue'
 import RolePage from '@/views/Kyl/RolePage.vue'
 import ElectionDates from '@/views/Kyl/ElectionDates.vue'
+import AgentPage from '@/components/MainApp/AgentPage.vue'
 
 const routes = [
   {
@@ -73,6 +74,12 @@ const routes = [
         name: 'ElectionsDate',
         component: ElectionDates,
         meta: { title: 'Celve - Elections' },
+      },
+      {
+        path: 'checker',
+        name: 'AgentPage',
+        component: AgentPage,
+        meta: {title: 'Celve - Checker'},
       },
       {
         path: 'leaders-role',

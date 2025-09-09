@@ -1,17 +1,23 @@
 
+
 <template>
   <div class="main-content">
     <div class="welcome-bar">
       <h1 class="welcome-text">Hello, {{ firstName }}</h1>
+
+      <div class="welcome-center">
+        <router-link :to="{name: 'AgentPage'}" class="misinfo-btn">
+          🚨 Misinformation Checker
+        </router-link>
+      </div>
       <div class="user-info" ref="menuWrapper">
         <div class="avatar" @click="toggleMenu">{{ initials }}</div>
-        
         <div v-if="menuOpen" class="dropdown-menu">
           <router-link :to="{name: 'ProfilePage'}" class="dropdown-item">Profile</router-link>
           <router-link :to="{name: 'HomeScreen'}" class="dropdown-item">Dashboard</router-link>
           <a v-if="isSuperuser" href="https://celve-backend.onrender.com/admin/" target="_blank" class="dropdown-item">
             Admin Panel
-            </a>
+          </a>
           <button @click="handleLogout" class="logout-btn">Logout</button>
         </div>
       </div>
@@ -30,8 +36,8 @@ export default {
       username: '',
       initials: '',
       firstName: '',
-      isSuperuser: false, 
-      menuOpen: false,  
+      isSuperuser: false,
+      menuOpen: false,
     };
   },
   methods: {
@@ -67,11 +73,9 @@ export default {
       console.error('Error fetching profile:', err);
     }
 
-    
     document.addEventListener("click", this.handleClickOutside);
   },
   beforeUnmount() {
-  
     document.removeEventListener("click", this.handleClickOutside);
   }
 };
@@ -83,29 +87,72 @@ export default {
   padding: 20px;
   box-sizing: border-box;
   transition: margin-left 0.3s ease-in-out;
-
 }
-
 
 .welcome-bar {
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: space-between;
   background: #f8f9fa;
   padding: 12px 16px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   margin-bottom: 20px;
   height: 60px;
+}
+
+.welcome-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.misinfo-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(90deg, #e53e3e, #ed8936);
+  border-radius: 6px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+.misinfo-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(229, 62, 62, 0.5);
+  background: linear-gradient(90deg, #c53030, #dd6b20);
+}
+
+.misinfo-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.misinfo-btn:hover::before {
+  width: 200px;
+  height: 200px;
 }
 
 .welcome-text {
   font-size: 1.4rem;
   font-weight: bold;
-  margin: 30px;
+  margin: 0 20px;
   color: #333;
 }
-
 
 .user-info {
   display: flex;
@@ -125,10 +172,10 @@ export default {
   font-weight: bold;
   font-size: 1.1rem;
   border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-
 }
+
 .dropdown-menu {
   position: absolute;
   top: calc(100% + 10px);
@@ -152,9 +199,10 @@ export default {
 .dropdown-item:hover {
   background: #f5f5f5;
 }
-.logout-btn{
-  background-color:#4D0099;
-  color:white;
+
+.logout-btn {
+  background-color: #4D0099;
+  color: white;
   padding: 10px;
   width: 80%;
   border-radius: 10px;
@@ -169,12 +217,43 @@ export default {
   color: #555;
 }
 
+@media (max-width: 768px) {
+  .welcome-bar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px;
+  }
+
+  .welcome-text {
+    font-size: 1.2rem;
+    margin: 10px;
+  }
+
+  .misinfo-btn {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  .welcome-center {
+    flex-grow: 0;
+  }
+}
+
 @media (min-width: 768px) {
   .main-content {
     margin-left: 260px;
   }
- 
-  
+}
 
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(229, 62, 62, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 10px 5px rgba(229, 62, 62, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(229, 62, 62, 0.7);
+  }
 }
 </style>

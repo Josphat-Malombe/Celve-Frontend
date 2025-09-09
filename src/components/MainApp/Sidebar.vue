@@ -194,12 +194,12 @@
         </RouterLink>
 
         <RouterLink
-          to="#"
+          :to="{name: 'AgentPage'}"
           class="submenu-item"
           role="menuitem"
           @click="closeMore"
         >
-          Statistics
+          Checker
         </RouterLink>
 
         <RouterLink

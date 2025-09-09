@@ -20,6 +20,14 @@ export const getElectionDetails =()=>{
   return api.get("elections/");
 };
 
+export const checkMisinformation = (formData) => {
+  return api.post("misinformation/",formData, {
+    headers: {
+      "Content-Type":"multipart/form-data",
+    }
+  })
+}
+
 /* getCounties() returns a list of all counties, searchAny takes q as parameter(can be county,leader,costituency),getCountyLeaders()
 returns leaders of a particular county by id...getRoles() lists roles of a given position as input.....getElectionDetails()-->
 returns a list of all elections availble */
