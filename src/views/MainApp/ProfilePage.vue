@@ -15,7 +15,7 @@
       </div>
 
       <div class="user-meta">
-        <h2 class="title">{{ profile.username || '...' }}</h2>
+        <h2 class="title" style="color:#4c1d95;">{{ profile.username || '...' }} </h2>
         <p class="subtext">{{ profile.email || '...' }}</p>
       </div>
     </div>
@@ -110,7 +110,7 @@ export default {
 <style scoped>
 
 .profile-page {
-  max-width: 860px;
+  max-width: 920px;
   margin: 24px auto;
   padding: 20px;
   box-sizing: border-box;
@@ -208,7 +208,7 @@ export default {
   margin: 0 0 10px 0;
   font-size: 16px;
   font-weight: 700;
-  color: #0f172a;
+  color: #4c1d95;
 }
 
 .course-list {

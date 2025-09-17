@@ -152,18 +152,23 @@ export default {
   border-radius: 6px;
   font-size: 1rem;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  max-width: 920px;
+ 
 }
 
 .search-bar:focus {
   outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  border-color: #4c1d95;
+  box-shadow: 0 0 0 3px rgba(184, 139, 184, 0.25);
 }
 
 .article-list {
   display: grid;
   flex-direction: column;
   gap: 1.5rem;
+  max-width: 920px;
+  margin:auto;
+  
 }
 
 .article-entry {
@@ -195,7 +200,7 @@ export default {
   background:  #4D0099;
   color: #fff;
   padding: 0.3rem 0.75rem;
-  border-radius: 9999px; 
+  border-radius: 5px; 
   font-size: 0.85rem;
   font-weight: 500;
 }

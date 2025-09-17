@@ -79,16 +79,21 @@ export default {
 }
 
 .page-title {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
+  color: #4c1d95;
 }
 
+
 .position-card {
-  border: 1px solid #ccc;
+  border: 1px solid white;
   border-radius: 6px;
   margin-bottom: 15px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  max-width: 920px;
+  margin: auto;
+
 }
 
 .position-header {

@@ -181,12 +181,14 @@ export default {
 <style scoped>
 
 .dashboard {
-  max-width: 1280px;
+  max-width: 920px;
+  border-radius: 1rem;
   margin: 0 auto;
   padding: 3rem 1.5rem;
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
   color: #2d3748;
-  background: linear-gradient(135deg, #e0e7ff 0%, #e9d5ff 100%);
+  /*background: linear-gradient(135deg, #e0e7ff 0%, #e9d5ff 100%);*/
+  background: #f8f9fa;
   min-height: 100vh;
   position: relative;
   overflow: hidden;
@@ -295,7 +297,7 @@ export default {
 .course-card h2 {
   font-size: 1.75rem;
   font-weight: 600;
-  color: #2d3748;
+  color: #4c1d95;
   margin-bottom: 0.75rem;
   line-height: 1.2;
 }
@@ -360,7 +362,7 @@ export default {
   background: #ffffff;
   border-radius: 1rem;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  max-width: 700px;
+  max-width: 920px;
   margin: 3rem auto;
   animation: slideIn 0.6s ease-out;
 }

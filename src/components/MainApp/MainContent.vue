@@ -7,7 +7,7 @@
 
       <div class="welcome-center">
         <router-link :to="{name: 'AgentPage'}" class="misinfo-btn">
-          🚨 Misinformation Checker
+          Misinformation Checker
         </router-link>
       </div>
       <div class="user-info" ref="menuWrapper">
@@ -98,7 +98,8 @@ export default {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   margin-bottom: 20px;
-  height: 60px;
+  height: 70px;
+  border-radius: 1rem;
 }
 
 .welcome-center {
@@ -114,7 +115,7 @@ export default {
   font-size: 1rem;
   font-weight: 600;
   color: #ffffff;
-  background: linear-gradient(90deg, #e53e3e, #ed8936);
+  background: linear-gradient(90deg ,#4D0099, #cdaaef);
   border-radius: 6px;
   text-decoration: none;
   position: relative;
@@ -125,8 +126,8 @@ export default {
 
 .misinfo-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(229, 62, 62, 0.5);
-  background: linear-gradient(90deg, #c53030, #dd6b20);
+  box-shadow: 0 4px 12px rgba(1, 77, 30, 0.5);
+  background: linear-gradient(90deg , #cdaaef, #4D0099);
 }
 
 .misinfo-btn::before {

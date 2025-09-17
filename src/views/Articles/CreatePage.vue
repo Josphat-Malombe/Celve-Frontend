@@ -77,7 +77,7 @@ const handleSubmit = async () => {
 
 .card {
   width: 100%;
-  max-width: 1200px;
+  max-width: 980px;
   height: calc(100vh - 32px);
   background-color: #ffffff;
   border-radius: 8px;
@@ -91,10 +91,10 @@ const handleSubmit = async () => {
 h2 {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 1.5rem;
-  color: #1a202c;
+  color: #4c1d95;
   text-align: center;
   margin-bottom: 24px;
-  font-weight: 600;
+  font-weight: 900;
 }
 
 .form-group {
@@ -117,8 +117,8 @@ h2 {
 
 .title-input:focus {
   outline: none;
-  border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  border-color: #4c1d95;
+  box-shadow: 0 0 0 3px rgba(133, 143, 164, 0.2);
 }
 
 .title-input::placeholder {
@@ -153,7 +153,7 @@ h2 {
 }
 
 .submit-button:hover {
-  background-color: #1d4ed8;
+  background-color: #c022e0;
 }
 
 .submit-button:disabled {

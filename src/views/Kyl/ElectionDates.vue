@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>By-elections</h1>
+    <h1 style="color:#4c1d95;">By Elections 2025</h1>
     <section>
       <div class="elections">
         <div v-if="loading" class="loading">Loading Election Details...</div>
@@ -13,7 +13,7 @@
             class="election-card"
           >
             <h2> {{ election.location_name }}, {{ election.location_type }}</h2>
-            <h4>{{ election.position }}</h4>
+            <h4>Position: {{ election.position }}</h4>
             <p>{{ formatDate(election.election_date) }}</p>
 
             <button @click="toggleCandidates(election.id)">
@@ -89,7 +89,7 @@ body {
 
 
 .elections {
-  max-width: 1200px;
+  max-width: 920px;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -98,14 +98,14 @@ h1 {
   font-size: 2.5rem;
   color: #1a3c5e;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   font-weight: 700;
 }
 
 
 .election-list {
-  display: column;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
 }
 

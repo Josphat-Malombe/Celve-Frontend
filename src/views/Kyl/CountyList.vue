@@ -1,7 +1,7 @@
 <template>
   <div class="kyl">
     <header class="kyl__header">
-      <h1 class="kyl__title">Know Your Leader</h1>
+      <h1 class="kyl__title" style="color:#4c1d95;">Know Your Leader</h1>
 
       <div class="kyl__search">
         <input
@@ -44,7 +44,7 @@
   </div>
 
   <div class="kv">
-    <span class="label">County</span>
+    <span class="label" >County</span>
     <strong>{{ showField(result.data, 'county', 'county_id') }}</strong>
   </div>
 
@@ -69,7 +69,7 @@
 
     <section class="card">
       <div class="card__head">
-        <h2 class="card__title">All Counties</h2>
+        <h2 class="card__title" style="color:#4c1d95;">All Counties</h2>
         <input
           v-model="filter"
           class="kyl__search-input kyl__search-input--mini"
@@ -86,7 +86,7 @@
         >
           <div class="county">
             <div class="county__name">{{ county.name }}</div>
-            <button class="kyl__btn kyl__btn--ghost" @click="openCounty(county.id)">
+            <button class="kyl__btn kyl__btn--ghost" style="color:#4c1d95;" @click="openCounty(county.id)">
               View leaders
             </button>
           </div>
@@ -223,6 +223,7 @@ export default {
 
 .kyl__header { margin-bottom: 16px; }
 .kyl__title { font-size: 28px; font-weight: 800; margin: 0 0 12px; }
+
 
 .kyl__search { display: flex; gap: 8px; align-items: center; }
 .kyl__search-input {

@@ -74,11 +74,12 @@ export default {
 
 <style scoped>
 .misinfo-container {
-  max-width: 100%;
+  max-width: 920px;
   margin: 0px auto;
+  margin-top: 50px;
   padding: 24px;
   height: 85vh;
-  background: linear-gradient(135deg, #2d3748 0%, #2d3748 100%);
+  background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
@@ -91,10 +92,9 @@ export default {
 .title {
   font-size: 2rem;
   font-weight: 700;
-  color: #ffffff;
+  background-color: #4c1d95;
   text-align: center;
-  margin-bottom: 24px;
-  background: linear-gradient(to right,  #4D0099, #c4bcd4);
+  margin-bottom: 50px;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -104,9 +104,9 @@ export default {
   width: 100%;
   height: 120px;
   padding: 12px;
-  background: #2d3748;
-  color: #e2e8f0;
-  border: 1px solid #4a5568;
+  background: #ffffff;
+  color: #06193b;
+  border: 1px solid #4c1d95;
   border-radius: 8px;
   font-size: 1rem;
   resize: vertical;
@@ -120,14 +120,14 @@ export default {
 }
 
 .textarea::placeholder {
-  color: #a0aec0;
+  color: #83868a;
 }
 
 .file-input {
   display: block;
   width: 100%;
   margin: 16px 0;
-  color: #e2e8f0;
+  color: #212224;
   font-size: 0.9rem;
 }
 
@@ -142,13 +142,13 @@ export default {
 }
 
 .file-input::-webkit-file-upload-button:hover {
-  background: #2b6cb0;
+  background: #c022e0;
 }
 
 .submit-btn {
   width: 100%;
   padding: 12px 24px;
-  background: linear-gradient(to right, #3182ce,  #4D0099);
+  background: linear-gradient(to right, #4c1d95,  #4D0099);
   color: #ffffff;
   font-size: 1.1rem;
   font-weight: 600;
@@ -159,7 +159,7 @@ export default {
 }
 
 .submit-btn:hover {
-  background: linear-gradient(to right, #2b6cb0, #805ad5);
+  background: #c022e0;
   transform: translateY(-2px);
 }
 

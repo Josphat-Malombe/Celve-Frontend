@@ -115,6 +115,9 @@ export default {
   text-align: center;
   margin-bottom: 40px;
 }
+.hero h1{
+  color: #4c1d95;
+}
 .hero-title {
   font-size: 2.5rem;
   font-weight: 800;
@@ -135,7 +138,7 @@ export default {
 }
 .summary-card {
   flex: 1 1 160px;
-  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+  background: linear-gradient(135deg,  #4c1d95, #c022e0);
   color: white;
   border-radius: 16px;
   padding: 20px;

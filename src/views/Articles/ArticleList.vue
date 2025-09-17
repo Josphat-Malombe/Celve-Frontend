@@ -90,7 +90,7 @@ export default {
 }
 
 .article-section {
-  max-width: 100%;
+  max-width: 920px;
   margin: 0 auto;
   padding: 2rem 1rem;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -100,7 +100,7 @@ export default {
 h1 {
   font-size: 2.25rem;
   font-weight: 700;
-  color: #1a237e;
+  color:#4c1d95;
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -108,7 +108,7 @@ h1 {
 
 .search-bar {
   width: 100%;
-  max-width: 60%;
+  max-width: 920px;
   margin: 0 auto 2rem;
   padding: 0.75rem 1rem;
   font-size: 1rem;
@@ -155,15 +155,11 @@ h1 {
   margin-bottom: 1rem;
 }
 
-.read-more {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: #1a237e;
-  color: #ffffff;
+
+.read-more-link {
+  color: #4c1d95;
   text-decoration: none;
-  border-radius: 4px;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
+ 
 }
 
 .read-more:hover {
@@ -197,13 +193,4 @@ h1 {
   }
 }
 
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .title {
-    font-size: 1.25rem;
-  }
-}
 </style>
