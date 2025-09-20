@@ -14,7 +14,7 @@ export default {
       <div class="hero-content">
         <h1 style="color:white;">Center for Electoral Leadership and Voter Education</h1>
         <p style="color: orange;">Empower Voters. Inspire Leaders. Sustain Democracy.</p>
-        <router-link :to="{name: 'LoginPage'}" class="cta-button">Get Involved</router-link>
+        <router-link :to="{name: 'LoginPage'}" class="cta-button" style="background-color:#4D0099;">Get Involved</router-link>
        
       </div>
     </section>
@@ -22,7 +22,7 @@ export default {
     <section class="why-matters-section">
       <div class="container">
         <div class="why-matters-content">
-          <h2>Why Civic Education Can’t Wait</h2>
+          <h2 style="color:#4c1d95;">Why Civic Education Can’t Wait</h2>
           <p>
             Kenya faces recurring electoral challenges—low civic awareness, misinformation, youth apathy, and election-time violence. CELVE was born from a belief that democracy must be built every day, not just during campaigns.
           </p>
@@ -33,13 +33,13 @@ export default {
 
     <section id="" class="mission-section" style="margin-top: -70px;">
       <div class="container">
-        <h2 class="section-title">Empower, Educate, Engage.</h2>
+        <h2 class="section-title" style="color:#4c1d95;">Empower, Educate, Engage.</h2>
         <div class="card-container">
           <div class="card">
             <div class="card-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
             </div>
-            <h3>Train electoral officials</h3>
+            <h3 style="color:#4c1d95;">Train electoral officials</h3>
             <ul>
               <li>Certified</li>
               <li>Ethical</li>
@@ -104,7 +104,7 @@ export default {
     <section id="program" class="programs-section">
     <div class="container">
         <header class="section-header">
-            <h2>Empowering Citizens Through Education</h2>
+            <h2 style="color:#4c1d95;">Empowering Citizens Through Education</h2>
             <p>Join our mission to foster informed, engaged, and responsible communities.</p>
         </header>
         <div class="programs-grid">
@@ -341,7 +341,7 @@ html{
 .card h3 {
   font-size: 1.4rem;
   margin-bottom: 15px;
-  color: #333;
+  color:#4c1d95;
 }
 
 .card ul {
@@ -417,7 +417,7 @@ html{
 
 .program-card h3 {
     font-size: 1.5rem;
-    color: #1e3a8a;
+    color: #4c1d95;
     margin-bottom: 0.5rem;
 }
 

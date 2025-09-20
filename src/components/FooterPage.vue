@@ -1,6 +1,4 @@
 
-
-
 <script>
 export default {
 
@@ -40,8 +38,8 @@ export default {
         <div class="footer-contact">
           <h4>Contact Us</h4>
           <ul>
-            <li><a href="mailto:info@celve.com">info@celve.org</a></li>
-            <li><a href="tel:+254712254000">+254 712 254 000</a></li>
+            <li><a href="mailto:info@celve.com">celve.org@gmail.com</a></li>
+            <li><a href="tel:+254712254000">+254 732406245</a></li>
             </ul>
         </div>
 

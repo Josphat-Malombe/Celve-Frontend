@@ -120,8 +120,7 @@ export default {
 .page-title {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: #333;
+  color: #4D0099;
 }
 
 .loading,
